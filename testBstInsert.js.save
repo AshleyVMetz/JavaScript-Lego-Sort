@@ -1,0 +1,650 @@
+<pre><font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ ls project1
+package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ cd project1
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+
+	<font color="#4E9A06">new file:   package.json</font>
+
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git add .
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit -a -m &quot;created the npm project structure&quot;
+[master (root-commit) f98004e] created the npm project structure
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 package.json
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ less package.json
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git status
+On branch master
+nothing to commit, working tree clean
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pwd
+/home/student/project1
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pwd
+/home/student/project1
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ tree
+
+Command &apos;tree&apos; not found, but can be installed with:
+
+sudo snap install tree  # version 1.8.0+pkg-3fd6, or
+sudo apt  install tree
+
+See &apos;snap info tree&apos; for additional versions.
+
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls -ls
+total 4
+0 -rw-r--r-- 1 student student    0 Jun 13 19:01 package.json
+4 drwxr-xr-x 2 student student 4096 Jun 13 16:29 <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ man ls
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls -lS
+total 4
+drwxr-xr-x 2 student student 4096 Jun 13 16:29 <font color="#729FCF"><b>test</b></font>
+-rw-r--r-- 1 student student    0 Jun 13 19:01 package.json
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls -ls
+total 4
+0 -rw-r--r-- 1 student student    0 Jun 13 19:01 package.json
+4 drwxr-xr-x 2 student student 4096 Jun 13 16:29 <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cd
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ cd
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ cd
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ pwd
+/home/student
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ ls
+<font color="#729FCF"><b>Desktop</b></font>    examples.desktop  package.json       <font color="#729FCF"><b>project1</b></font>   <font color="#729FCF"><b>Videos</b></font>
+<font color="#729FCF"><b>Documents</b></font>  <font color="#729FCF"><b>Music</b></font>             package-lock.json  <font color="#729FCF"><b>Public</b></font>
+<font color="#729FCF"><b>Downloads</b></font>  <font color="#729FCF"><b>node_modules</b></font>      <font color="#729FCF"><b>Pictures</b></font>           <font color="#729FCF"><b>Templates</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ cd project1/
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm
+
+Usage: npm &lt;command&gt;
+
+where &lt;command&gt; is one of:
+    access, adduser, audit, bin, bugs, c, cache, ci, cit,
+    clean-install, clean-install-test, completion, config,
+    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,
+    edit, explore, get, help, help-search, hook, i, init,
+    install, install-ci-test, install-test, it, link, list, ln,
+    login, logout, ls, org, outdated, owner, pack, ping, prefix,
+    profile, prune, publish, rb, rebuild, repo, restart, root,
+    run, run-script, s, se, search, set, shrinkwrap, star,
+    stars, start, stop, t, team, test, token, tst, un,
+    uninstall, unpublish, unstar, up, update, v, version, view,
+    whoami
+
+npm &lt;command&gt; -h  quick help on &lt;command&gt;
+npm -l            display full usage info
+npm help &lt;term&gt;   search for help on &lt;term&gt;
+npm help npm      involved overview
+
+Specify configs in the ini-formatted file:
+    /home/student/.npmrc
+or on the command line via: npm &lt;command&gt; --key value
+Config info can be viewed via: npm help config
+
+npm@6.9.0 /usr/local/lib/node_modules/npm
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm install -h
+
+npm install (with no args, in package dir)
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;tag&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;version&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;version range&gt;
+npm install &lt;folder&gt;
+npm install &lt;tarball file&gt;
+npm install &lt;tarball url&gt;
+npm install &lt;git:// url&gt;
+npm install &lt;github username&gt;/&lt;github project&gt;
+
+aliases: i, isntall, add
+common options: [--save-prod|--save-dev|--save-optional] [--save-exact] [--no-save]
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm install --save-dev -h
+
+npm install (with no args, in package dir)
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;tag&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;version&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;version range&gt;
+npm install &lt;folder&gt;
+npm install &lt;tarball file&gt;
+npm install &lt;tarball url&gt;
+npm install &lt;git:// url&gt;
+npm install &lt;github username&gt;/&lt;github project&gt;
+
+aliases: i, isntall, add
+common options: [--save-prod|--save-dev|--save-optional] [--save-exact] [--no-save]
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm install mocha --save-dev 
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">file</font> /home/student/project1/package.json
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">code</font> EJSONPARSE
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">JSON.parse</font> Failed to parse json
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">JSON.parse</font> Unexpected end of JSON input while parsing near &apos;&apos;
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">JSON.parse</font> Failed to parse package.json data.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> <font color="#75507B">JSON.parse</font> package.json must be actual JSON, not just JavaScript.
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> A complete log of this run can be found in:
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span>     /home/student/.npm/_logs/2019-06-14T02_57_20_035Z-debug.log
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi package.json 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ rm package.json 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm install mocha --save-dev 
++ mocha@6.1.4
+updated 1 package and audited 224 packages in 7.143s
+found <font color="#8AE234">0</font> vulnerabilities
+
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+<font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ mocha
+
+Command &apos;mocha&apos; not found, but can be installed with:
+
+sudo apt install mocha
+
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (project1) 
+version: (1.0.0) 
+description: 
+entry point: (index.js) 
+test command: 
+git repository: 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /home/student/project1/package.json:
+
+{
+  &quot;name&quot;: &quot;project1&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;directories&quot;: {
+    &quot;test&quot;: &quot;test&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes) n
+Aborted.
+
+
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (project1) 
+version: (1.0.0) 
+description: 
+entry point: (index.js) 
+test command: mocha
+git repository: 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /home/student/project1/package.json:
+
+{
+  &quot;name&quot;: &quot;project1&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;directories&quot;: {
+    &quot;test&quot;: &quot;test&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;mocha&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes) yes
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ dir
+package.json  test
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cat package.json 
+{
+  &quot;name&quot;: &quot;project1&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;directories&quot;: {
+    &quot;test&quot;: &quot;test&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;mocha&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ less package.json 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cat package.json 
+{
+  &quot;name&quot;: &quot;project1&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;directories&quot;: {
+    &quot;test&quot;: &quot;test&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;mocha&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pwd
+/home/student/project1
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cd /
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>/</b></font>$ ls
+<font color="#729FCF"><b>bin</b></font>    <font color="#729FCF"><b>dev</b></font>   <font color="#34E2E2"><b>initrd.img</b></font>      <font color="#729FCF"><b>lib64</b></font>       <font color="#729FCF"><b>mnt</b></font>   <font color="#729FCF"><b>root</b></font>  <font color="#729FCF"><b>snap</b></font>      <font color="#729FCF"><b>sys</b></font>  <font color="#729FCF"><b>var</b></font>
+<font color="#729FCF"><b>boot</b></font>   <font color="#729FCF"><b>etc</b></font>   <font color="#34E2E2"><b>initrd.img.old</b></font>  <font color="#729FCF"><b>lost+found</b></font>  <font color="#729FCF"><b>opt</b></font>   <font color="#729FCF"><b>run</b></font>   <font color="#729FCF"><b>srv</b></font>       <span style="background-color:#4E9A06"><font color="#2E3436">tmp</font></span>  <font color="#34E2E2"><b>vmlinuz</b></font>
+<font color="#729FCF"><b>cdrom</b></font>  <font color="#729FCF"><b>home</b></font>  <font color="#729FCF"><b>lib</b></font>             <font color="#729FCF"><b>media</b></font>       <font color="#729FCF"><b>proc</b></font>  <font color="#729FCF"><b>sbin</b></font>  swapfile  <font color="#729FCF"><b>usr</b></font>  <font color="#34E2E2"><b>vmlinuz.old</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>/</b></font>$ cd vagrent
+bash: cd: vagrent: No such file or directory
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>/</b></font>$ cd
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~</b></font>$ cd project1/
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ dir
+package.json  test
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cd test/
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/test</b></font>$ cd .
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/test</b></font>$ cd ..
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ dir
+package.json  test
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git init
+Reinitialized existing Git repository in /home/student/project1/.git/
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls -lsa
+total 20
+4 drwxr-xr-x  4 student student 4096 Jun 13 23:01 <font color="#729FCF"><b>.</b></font>
+4 drwxr-xr-x 22 student student 4096 Jun 13 21:50 <font color="#729FCF"><b>..</b></font>
+4 drwxr-xr-x  8 student student 4096 Jun 13 23:04 <font color="#729FCF"><b>.git</b></font>
+4 -rw-r--r--  1 student student  209 Jun 13 23:01 package.json
+4 drwxr-xr-x  2 student student 4096 Jun 13 16:29 <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cd .git
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/.git</b></font>$ ls
+<font color="#729FCF"><b>branches</b></font>        config       HEAD   index  <font color="#729FCF"><b>logs</b></font>     <font color="#729FCF"><b>refs</b></font>
+COMMIT_EDITMSG  description  <font color="#729FCF"><b>hooks</b></font>  <font color="#729FCF"><b>info</b></font>   <font color="#729FCF"><b>objects</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/.git</b></font>$ cd ..
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git add .
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit -a -m &quot;create the npm project structure.&quot;
+[master c556aef] create the npm project structure.
+ 1 file changed, 14 insertions(+)
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi legos.js
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi legos.js
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico legos.js 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cat legos.js 
+module.exports.Brick = Brick;
+
+function Brick(size,color)
+{
+	this.size = size;
+	this.color = color;
+}
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico legos.js 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico legos.js 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cat legos.js 
+module.exports.Brick = Brick;
+
+
+function Brick(size,color)
+{
+	this.size = size;
+	this.color = color;
+}
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ dir
+legos.js  package.json	test
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cd test/
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/test</b></font>$ ls
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/test</b></font>$ pico testBrickConstructor.js
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/test</b></font>$ ls
+testBrickConstructor.js
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/test</b></font>$ cat testBrickConstructor.js 
+var assert = require(&apos;assert&apos;);
+var lego = require(&apos;../legos&apos;);
+const Brick = lego.Brick;
+
+describe(&apos;Brick&apos;, function() {
+	describe(&apos;#Brick(size,color)&apos;, function() {
+		it(&apos;should save size and color within object&apos;, function() {
+			b = new Brick(&quot;blue&quot;,4);
+			assert.equal(b.color,&quot;blue&quot;);
+			assert.equal(b.size,4);
+		}
+	}
+});
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1/test</b></font>$ cd ..
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm test
+
+&gt; project1@1.0.0 test /home/student/project1
+&gt; mocha
+
+sh: 1: mocha: not found
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Test failed.  See above for more details.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm install mocha
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> created a lockfile as package-lock.json. You should commit this file.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> project1@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> project1@1.0.0 No repository field.
+
++ mocha@6.1.4
+added 115 packages from 509 contributors and audited 224 packages in 6.941s
+found <font color="#8AE234">0</font> vulnerabilities
+
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+legos.js  <font color="#729FCF"><b>node_modules</b></font>  package.json  package-lock.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi package-lock.json 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ rm package-lock.json 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+legos.js  <font color="#729FCF"><b>node_modules</b></font>  package.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm install mocha --save-dev
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> <font color="#75507B">save</font> mocha is being moved from dependencies to devDependencies
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#3465A4">notice</font></span> created a lockfile as package-lock.json. You should commit this file.
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> project1@1.0.0 No description
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#C4A000"><font color="#2E3436">WARN</font></span> project1@1.0.0 No repository field.
+
++ mocha@6.1.4
+updated 1 package and audited 224 packages in 1.545s
+found <font color="#8AE234">0</font> vulnerabilities
+
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+legos.js  <font color="#729FCF"><b>node_modules</b></font>  package.json  package-lock.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi package-lock.json 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi package
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi package.json
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+legos.js  <font color="#729FCF"><b>node_modules</b></font>  package.json  package-lock.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm test
+
+&gt; project1@1.0.0 test /home/student/project1
+&gt; mocha
+
+/home/student/project1/test/testBrickConstructor.js:11
+		}
+		^
+
+SyntaxError: missing ) after argument list
+    at createScript (vm.js:80:10)
+    at Object.runInThisContext (vm.js:139:10)
+    at Module._compile (module.js:616:28)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at /home/student/project1/node_modules/mocha/lib/mocha.js:330:36
+    at Array.forEach (&lt;anonymous&gt;)
+    at Mocha.loadFiles (/home/student/project1/node_modules/mocha/lib/mocha.js:327:14)
+    at Mocha.run (/home/student/project1/node_modules/mocha/lib/mocha.js:804:10)
+    at Object.exports.singleRun (/home/student/project1/node_modules/mocha/lib/cli/run-helpers.js:207:16)
+    at exports.runMocha (/home/student/project1/node_modules/mocha/lib/cli/run-helpers.js:300:13)
+    at Object.exports.handler.argv [as handler] (/home/student/project1/node_modules/mocha/lib/cli/run.js:296:3)
+    at Object.runCommand (/home/student/project1/node_modules/yargs/lib/command.js:242:26)
+    at Object.parseArgs [as _parseArgs] (/home/student/project1/node_modules/yargs/yargs.js:1104:24)
+    at Object.parse (/home/student/project1/node_modules/yargs/yargs.js:566:25)
+    at Object.exports.main (/home/student/project1/node_modules/mocha/lib/cli/cli.js:63:6)
+    at Object.&lt;anonymous&gt; (/home/student/project1/node_modules/mocha/bin/_mocha:10:23)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:188:16)
+    at bootstrap_node.js:609:3
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Test failed.  See above for more details.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico test/testBrickConstructor.js 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm test
+
+&gt; project1@1.0.0 test /home/student/project1
+&gt; mocha
+
+
+
+  Brick
+    #Brick(size,color)
+    <font color="#CC0000">  1) should save size and color within object</font>
+
+
+<font color="#8AE234"> </font><font color="#4E9A06"> 0 passing</font><font color="#555753"> (6ms)</font>
+<font color="#CC0000">  1 failing</font>
+
+  1) Brick
+       #Brick(size,color)
+         should save size and color within object:
+<font color="#CC0000">     AssertionError [ERR_ASSERTION]: 4 == &apos;blue&apos;</font>
+<font color="#555753">      at Context.&lt;anonymous&gt; (test/testBrickConstructor.js:9:11)</font>
+
+
+
+<span style="background-color:#2E3436"><font color="#D3D7CF">npm</font></span> <span style="background-color:#2E3436"><font color="#CC0000">ERR!</font></span> Test failed.  See above for more details.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ vi legos.js 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico test/testBrickConstructor.js 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico test/testBrickConstructor.js 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ nmp test
+
+Command &apos;nmp&apos; not found, did you mean:
+
+  command &apos;nms&apos; from snap nms (0.1)
+  command &apos;nmap&apos; from snap nmap (7.70)
+  command &apos;nmap&apos; from deb nmap
+  command &apos;bmp&apos; from deb ztex-bmp
+  command &apos;np&apos; from deb mosquitto-auth-plugin
+  command &apos;npm&apos; from deb npm
+  command &apos;nqp&apos; from deb nqp
+  command &apos;omp&apos; from deb openvas-cli
+  command &apos;nm&apos; from deb binutils
+  command &apos;xmp&apos; from deb xmp
+  command &apos;nup&apos; from deb dvi2ps
+  command &apos;cmp&apos; from deb diffutils
+  command &apos;nop&apos; from deb graphviz
+
+See &apos;snap info &lt;snapname&gt;&apos; for additional versions.
+
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm test
+
+&gt; project1@1.0.0 test /home/student/project1
+&gt; mocha
+
+
+
+  Brick
+    #Brick(size,color)
+    <font color="#4E9A06">  ✓</font><font color="#555753"> should save size and color within object</font>
+
+
+<font color="#8AE234"> </font><font color="#4E9A06"> 1 passing</font><font color="#555753"> (6ms)</font>
+
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git add .
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit
+Aborting commit due to empty commit message.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+legos.js  <font color="#729FCF"><b>node_modules</b></font>  package.json  package-lock.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico .gitignore
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cat .git
+cat: .git: Is a directory
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ cat .gitignore 
+node-modules
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico .gitignore
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ ls
+legos.js  <font color="#729FCF"><b>node_modules</b></font>  package.json  package-lock.json  <font color="#729FCF"><b>test</b></font>
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ npm test
+
+&gt; project1@1.0.0 test /home/student/project1
+&gt; mocha
+
+
+
+  Brick
+    #Brick(size,color)
+    <font color="#4E9A06">  ✓</font><font color="#555753"> should save size and color within object</font>
+
+
+<font color="#8AE234"> </font><font color="#4E9A06"> 1 passing</font><font color="#555753"> (8ms)</font>
+
+
+┌───────────────────────────────────────────────────────────┐
+│                 <font color="#C4A000"> npm update check failed </font>                 │
+│            Try running with <font color="#06989A">sudo</font> or get access            │
+│           to the local update config store via            │
+│<font color="#06989A"> sudo chown -R $USER:$(id -gn $USER) /home/student/.config </font>│
+└───────────────────────────────────────────────────────────┘
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git add .
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit 
+Aborting commit due to empty commit message.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico .git
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ pico .gitignore 
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit .gitignore 
+Aborting commit due to empty commit message.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit
+Aborting commit due to empty commit message.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit .gitignore 
+[master 2933b6e] ignore module folder
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git 
+usage: git [--version] [--help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           &lt;command&gt; [&lt;args&gt;]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+&apos;git help -a&apos; and &apos;git help -g&apos; list available subcommands and some
+concept guides. See &apos;git help &lt;command&gt;&apos; or &apos;git help &lt;concept&gt;&apos;
+to read about a specific subcommand or concept.
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git reset
+Unstaged changes after reset:
+M	package.json
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit
+On branch master
+Changes not staged for commit:
+	<font color="#CC0000">modified:   package.json</font>
+
+Untracked files:
+	<font color="#CC0000">legos.js</font>
+	<font color="#CC0000">package-lock.json</font>
+	<font color="#CC0000">test/</font>
+
+no changes added to commit
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git add .
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ git commit
+[master b5446ae] added constructor with test case
+ 4 files changed, 995 insertions(+), 1 deletion(-)
+ create mode 100644 legos.js
+ create mode 100644 package-lock.json
+ create mode 100644 test/testBrickConstructor.js
+<font color="#8AE234"><b>student@ubuntu</b></font>:<font color="#729FCF"><b>~/project1</b></font>$ 
+</pre>
